@@ -1,4 +1,5 @@
-<p align="center">
+https://shubinapp.vercel.app/
+<!-- <p align="center">
   <a href="https://nextjs-fastapi-starter.vercel.app/">
     <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
     <h3 align="center">Next.js FastAPI Starter</h3>
@@ -75,4 +76,4 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 - [FastAPI Documentation](https://fastapi.tiangolo.com/) - learn about FastAPI features and API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome! -->
