@@ -9,7 +9,7 @@ export default function Index() {
         <AppBar position="static">
             <Toolbar>
                 <Button color="inherit" onClick={() => setTab('tab3')}>
-                    Addiere
+                    Koordinatentransformation
                 </Button>
             </Toolbar>
         </AppBar>

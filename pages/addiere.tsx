@@ -20,16 +20,16 @@ const Addiere = () => {
     return (
         <>
             <Paper elevation={5} style={{ padding: '15px', margin: '15px', maxWidth: '400px' }}>
-                <Typography variant="h5">Addition</Typography>
+                <Typography variant="h5">Transformation</Typography>
                 <TextField
-                    label="Zahl A"
+                    label="LV95"
                     value={a}
                     onChange={(e) => setA(parseInt(e.target.value, 10) || 0)}
                     fullWidth
                     margin="normal"
                 />
                 <TextField
-                    label="Zahl B"
+                    label="WGS84"
                     value={b}
                     onChange={(e) => setB(parseInt(e.target.value, 10) || 0)}
                     fullWidth
