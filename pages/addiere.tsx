@@ -1,53 +1,52 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { Button, TextField, Typography, Paper } from '@mui/material';
+import geolib from 'geolib';
+
+const LV95ToWGS84 = (x, y) => {
+    const wgs84Coords = geolib.lv95ToWgs84({ easting: x, northing: y });
+    return wgs84Coords;
+};
 
 const Addiere = () => {
     const [a, setA] = useState(0);
     const [b, setB] = useState(0);
-    const [resultat, setResultat] = useState(0);
+    const [resultat, setResultat] = useState('');
 
-    const addition = async () => {
-        try {
-            const response = await axios.get(`/api/add?a=${a}&b=${b}`);
-            setResultat(response.data.sum);
-        }
-        catch {
-            console.log("Fehler!! API Aufruf!!");
-        }
-    }
+    const addition = () => {
+        const wgs84Coords = LV95ToWGS84(a, b);
+        setResultat(`WGS84 Koordinaten: ${wgs84Coords.latitude}, ${wgs84Coords.longitude}`);
+    };
 
     return (
         <>
             <Paper elevation={5} style={{ padding: '15px', margin: '15px', maxWidth: '400px' }}>
                 <Typography variant="h5">Transformation</Typography>
                 <TextField
-                    label="LV95"
+                    label="X (LV95)"
                     value={a}
                     onChange={(e) => setA(parseInt(e.target.value, 10) || 0)}
                     fullWidth
                     margin="normal"
                 />
                 <TextField
-                    label="WGS84"
+                    label="Y (LV95)"
                     value={b}
                     onChange={(e) => setB(parseInt(e.target.value, 10) || 0)}
                     fullWidth
                     margin="normal"
                 />
                 <Button variant="contained" color="primary" onClick={addition}>
-                    Addiere
+                    Преобразовать в WGS84
                 </Button>
 
-                {resultat != 0 && (
+                {resultat !== '' && (
                     <Typography variant="h6">
-                        Das Resultat ist: {resultat}
+                        {resultat}
                     </Typography>
-
                 )}
-
             </Paper>
-        </>)
-}
+        </>
+    );
+};
 
 export default Addiere;

@@ -25,6 +25,7 @@
 #     return {"sum": a+b}
 # Пример: https://shubinapp.vercel.app/
 # Пример: https://nextjs-fastapi-starter-42wwgdu29-volodymyrshubin2001s-projects.vercel.app/
+#Пример: http://localhost:8000/wgs84lv95?lng=600000&lat=200000
 import uvicorn
 from fastapi import FastAPI, Query
 from pyproj import Transformer
