@@ -17,7 +17,7 @@ export default function Index() {
 
         </AppBar>
 
-        {tab === 'tab1' && (<><h1>Inhalt Tab 1</h1></>)}
-        {tab === 'tab2' && (<><h1>Inhalt Tab 2</h1></>)}
+        {tab === 'tab1' && (<><h1>Inhalt Tab Eins</h1></>)}
+        {tab === 'tab2' && (<><h1>Inhalt Tab Zwei</h1></>)}
     </>)
 }
