@@ -24,6 +24,7 @@
 # def addiere(a: int, b: int):
 #     return {"sum": a+b}
 # Пример: http://localhost:3002/api/wgs84lv95?lng=600000&lat=200000
+# Пример: https://nextjs-fastapi-starter-42wwgdu29-volodymyrshubin2001s-projects.vercel.app/
 import uvicorn
 from fastapi import FastAPI, Query
 from pyproj import Transformer
